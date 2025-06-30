@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Главная</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        .container-fluid {
+            height: 100%;
+        }
+        .content {
+            display: flex;
+            height: 100%;
+        }
+        .sidebar {
+            background-color: black;
+            color: white;
+            padding: 1rem;
+        }
+        .card {
+            width: 18rem;
+            text-align: center;
+        }
+        .sidebar-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        .sidebar-item img {
+            width: 20px;
+            height: 20px;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row content"> <!-- Основной блок для работы с колонками -->
+        <div class="col-2 sidebar d-flex flex-column">
+            <h5 class="mt-1"><img src="https://avatars.mds.yandex.net/i?id=a9aa597d182de562c65e9613a100e468910d8d7740ad894b-11723693-images-thumbs&n=13" class="rounded-circle" alt="Меню" width="20px">  Меню</h5>
+            <hr>
+            <div class="sidebar-item">
+                <img src="https://avatars.mds.yandex.net/i?id=7526e39b33b06d60b5fb565cbd4c831520a4bdc0-10495176-images-thumbs&n=13" class="border border-white" alt="Главная">
+                <button type="button" class="btn btn-primary">Главная</button>
+            </div>
+            <div class="sidebar-item">
+                <img src="https://avatars.mds.yandex.net/i?id=2520c01a0e9fff72a64ba0a0a696293f2b79e772-5236780-images-thumbs&n=13" alt="Категории">
+                <button type="button" class="btn btn-primary">Категории</button>
+            </div>
+            <div class="sidebar-item">
+                <img src="https://avatars.mds.yandex.net/i?id=2d471c92cc881391cc261802d8ff6f4f76bf09b5-5905964-images-thumbs&n=13" alt="Заказы">
+                <button type="button" class="btn btn-primary">Заказы</button>
+            </div>
+            <div class="sidebar-item">
+                <img src="https://avatars.mds.yandex.net/i?id=f3215415fb3debfeea4ef35f7c8041d9e6d74f67-5865789-images-thumbs&n=13" alt="Контакты">
+                <button type="button" class="btn btn-primary">Контакты</button>
+            </div>
+            <div class="mt-auto"> <!-- Кнопка внизу колонки -->
+                <div class="dropdown">
+                    <hr>
+                    <img src="https://avatars.mds.yandex.net/i?id=b2266d78cef1da20e2f0fd46d284fa03841d78ee-4244759-images-thumbs&n=13" width="20px" style="margin-right: 0.5rem;">
+                    <button class="btn btn-secondary dropdown-toggle"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">Пользователь
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Профиль</a></li>
+                        <li><a class="dropdown-item" href="#">Выйти</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-10 d-flex justify-content-center align-items-center flex-column"> <!-- Колонка шириной 11/12 для размещения основного контента -->
+            <figure class="text-center">
+                <blockquote class="blockquote">
+                    <p class="h1"><strong>Главная</strong></p>
+                </blockquote>
+                <figcaption class="blockquote">
+                    Вы находитесь на сайте, предназначенном для продажи товаров.
+                </figcaption>
+            </figure>
+            <div class="row justify-content-center"> <!-- Центрируем карточки -->
+                <div class="col-4 d-flex justify-content-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Товар 1</h5>
+                            <hr> <!-- Горизонтальная линия -->
+                            <p class="card-text">Цена: $10.00</p>
+                            <a href="#" class="btn btn-primary">Купить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 d-flex justify-content-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Товар 2</h5>
+                            <hr> <!-- Горизонтальная линия -->
+                            <p class="card-text">Цена: $20.00</p>
+                            <a href="#" class="btn btn-primary">Купить</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 d-flex justify-content-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Товар 3</h5>
+                            <hr> <!-- Горизонтальная линия -->
+                            <p class="card-text">Цена: $30.00</p>
+                            <a href="#" class="btn btn-primary">Купить</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
