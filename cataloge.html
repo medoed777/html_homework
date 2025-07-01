@@ -1,10 +1,162 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Главная</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        .container-fluid {
+            height: 100%;
+        }
+        .content {
+            display: flex;
+            height: 100%;
+        }
+        .sidebar {
+            background-color: black;
+            color: white;
+            padding: 1rem;
+        }
+        .card {
+            width: 18rem;
+            text-align: center;
+        }
+        .sidebar-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        .sidebar-item img {
+            width: 20px;
+            height: 20px;
+            margin-right: 0.5rem;
+        }
+    </style>
 </head>
 <body>
+<div class="container-fluid">
+    <div class="row content"> <!-- Основной блок для работы с колонками -->
+        <div class="col-2 sidebar d-flex flex-column">
+            <h5 class="mt-1"><img src="https://avatars.mds.yandex.net/i?id=a9aa597d182de562c65e9613a100e468910d8d7740ad894b-11723693-images-thumbs&n=13" class="rounded-circle" alt="Меню" width="20px">  Меню</h5>
+            <hr>
+            <div class="sidebar-item">
+                <img src="https://avatars.mds.yandex.net/i?id=7526e39b33b06d60b5fb565cbd4c831520a4bdc0-10495176-images-thumbs&n=13" class="border border-white" alt="Главная">
+                <button type="button" class="btn btn-primary">Главная</button>
+            </div>
+            <div class="sidebar-item">
+                <img src="https://avatars.mds.yandex.net/i?id=2520c01a0e9fff72a64ba0a0a696293f2b79e772-5236780-images-thumbs&n=13" alt="Категории">
+                <button type="button" class="btn btn-primary">Категории</button>
+            </div>
+            <div class="sidebar-item">
+                <img src="https://avatars.mds.yandex.net/i?id=2d471c92cc881391cc261802d8ff6f4f76bf09b5-5905964-images-thumbs&n=13" alt="Заказы">
+                <button type="button" class="btn btn-primary">Заказы</button>
+            </div>
+            <div class="sidebar-item">
+                <img src="https://avatars.mds.yandex.net/i?id=f3215415fb3debfeea4ef35f7c8041d9e6d74f67-5865789-images-thumbs&n=13" alt="Контакты">
+                <button type="button" class="btn btn-primary">Контакты</button>
+            </div>
+            <div class="mt-auto"> <!-- Кнопка внизу колонки -->
+                <div class="dropdown">
+                    <hr>
+                    <img src="https://avatars.mds.yandex.net/i?id=b2266d78cef1da20e2f0fd46d284fa03841d78ee-4244759-images-thumbs&n=13" width="20px" style="margin-right: 0.5rem;">
+                    <button class="btn btn-secondary dropdown-toggle"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">Пользователь
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Профиль</a></li>
+                        <li><a class="dropdown-item" href="#">Выйти</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
+        <div class="col-10 d-flex justify-content-center align-items-center flex-column">
+    <figure class="text-center">
+        <blockquote class="blockquote">
+            <p class="h1"><strong>Каталог</strong></p>
+        </blockquote>
+    </figure>
+            <div class="container">
+                <div class="row justify-content-center" style="gap: 20px;"> <!-- Используем gap для отступов между карточками -->
+                    <div class="col-5">
+                        <div class="card" style="width: 100%;">
+                            <img src="https://avatars.mds.yandex.net/i?id=aa9b19fb49dce96e7c1f3edd6b1c6a9e_l-4491734-images-thumbs&n=13" class="card-img-top" alt="Thumbnail">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div class="d-flex justify-content-between align-items-center w-100 mt-3"> <!-- Контейнер для кнопок и времени -->
+                                    <div>
+                                        <button class="btn btn-secondary btn-sm">Кнопка 1</button>
+                                        <button class="btn btn-secondary btn-sm">Кнопка 2</button>
+                                    </div>
+                                    <span>5 минут назад</span> <!-- Время публикации -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="card" style="width: 100%;">
+                            <img src="https://avatars.mds.yandex.net/i?id=aa9b19fb49dce96e7c1f3edd6b1c6a9e_l-4491734-images-thumbs&n=13" class="card-img-top" alt="Thumbnail">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div class="d-flex justify-content-between align-items-center w-100 mt-3"> <!-- Контейнер для кнопок и времени -->
+                                    <div>
+                                        <button class="btn btn-secondary btn-sm">Кнопка 1</button>
+                                        <button class="btn btn-secondary btn-sm">Кнопка 2</button>
+                                    </div>
+                                    <span>5 минут назад</span> <!-- Время публикации -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="card" style="width: 100%;">
+                            <img src="https://avatars.mds.yandex.net/i?id=aa9b19fb49dce96e7c1f3edd6b1c6a9e_l-4491734-images-thumbs&n=13" class="card-img-top" alt="Thumbnail">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div class="d-flex justify-content-between align-items-center w-100 mt-3"> <!-- Контейнер для кнопок и времени -->
+                                    <div>
+                                        <button class="btn btn-secondary btn-sm">Кнопка 1</button>
+                                        <button class="btn btn-secondary btn-sm">Кнопка 2</button>
+                                    </div>
+                                    <span>5 минут назад</span> <!-- Время публикации -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-5">
+                            <div class="card" style="width: 100%;">
+                                <img src="https://avatars.mds.yandex.net/i?id=aa9b19fb49dce96e7c1f3edd6b1c6a9e_l-4491734-images-thumbs&n=13" class="card-img-top" alt="Thumbnail">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <div class="d-flex justify-content-between align-items-center w-100 mt-3"> <!-- Контейнер для кнопок и времени -->
+                                        <div>
+                                            <button class="btn btn-secondary btn-sm">Кнопка 1</button>
+                                            <button class="btn btn-secondary btn-sm">Кнопка 2</button>
+                                        </div>
+                                        <span>5 минут назад</span> <!-- Время публикации -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
